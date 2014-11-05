@@ -37,6 +37,7 @@
   "license": "",
   "devDependencies": {
     "coffee-script": "^1.8.0",
-    "request": "^2.47.0"
+    "request": "^2.47.0",
+    "grunt-protractor-runner": "^1.1.4"
   }
 }

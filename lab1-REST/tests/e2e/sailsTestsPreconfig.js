@@ -9,7 +9,7 @@ var req = request.defaults({
 var sailsBaseUrl = "http://localhost:1337";
 
 // Helpers
-var Helper = require("../lib/helpers.js");
+var Helper = require("../../lib/helpers.js");
 console.log.verbose = Helper.verbose;
 
 /**
