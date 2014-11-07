@@ -6,7 +6,7 @@ var req = request.defaults({
 });
 
 // Config
-var sailsBaseUrl = "http://localhost:1337";
+var sailsBaseUrl = process.env.BASE_URL || "http://localhost:1337/api";
 
 // Helpers
 var Helper = require("../../lib/helpers.js");
@@ -87,4 +87,5 @@ module.exports = {
   get: get,
   put: put,
   del: del,
+  parse: Helper.parseJSON
 }

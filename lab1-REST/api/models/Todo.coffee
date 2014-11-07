@@ -14,3 +14,22 @@ module.exports =
     duration:
       type: 'integer'
       required: true
+    description:
+      type: 'string'
+      defaultsTo: ""
+
+    author:
+      model: 'user'
+      required: true
+
+  beforeValidate: (todo, cb) ->
+    sails.log.verbose "Todo: ", todo
+    if not todo.author?
+      todo.author = current.user.id
+    cb()
+
+  beforeCreate: (todo, cb) ->
+    sails.log.verbose "Todo: ", todo
+    cb()
+
+

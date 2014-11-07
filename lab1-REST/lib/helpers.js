@@ -17,8 +17,20 @@ function verbose() {
   }
 }
 
+// String to JSON without errors
+function noErrorsStringToJSON(str) {
+    var json = null;
+    try {
+        json = JSON.parse(str);
+    } catch (e) {
+        return undefined;
+    }
+    return json;
+}
+
 // Module exports
 module.exports = {
   inArray: inArray,
-  verbose: verbose
+  verbose: verbose,
+  parseJSON: noErrorsStringToJSON
 }

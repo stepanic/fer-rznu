@@ -26,7 +26,7 @@ module.exports.policies = {
   *                                                                          *
   ***************************************************************************/
 
-  // '*': true,
+  '*': false,
 
   /***************************************************************************
   *                                                                          *
@@ -48,4 +48,36 @@ module.exports.policies = {
 		// before letting any users feed our rabbits
 		// feed : ['isNiceToAnimals', 'hasRabbitFood']
 	// }
+  //
+
+  UserController: {
+    '*': false,
+    'create': true,
+    'destroy': 'hasMasterToken',
+    'find': 'hasMasterToken',
+    'populate': [
+      'simpleRESTAuth',
+      'isUserOwner',
+    ],
+  },
+
+  TodoController: {
+    '*': false,
+    'create': 'simpleRESTAuth',
+    'update': [
+      'simpleRESTAuth',
+      'isUserTodoAuthor',
+    ],
+    'findOne': [
+      'simpleRESTAuth',
+      'isUserTodoAuthor',
+    ],
+    'destroy': [
+      'simpleRESTAuth',
+      'isUserTodoAuthor',
+    ],
+  },
+
+
+
 };
