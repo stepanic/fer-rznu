@@ -59,7 +59,7 @@ module.exports.http = {
         var agent = useragent.parse(req.headers['user-agent']);
 
         if (req.url.indexOf('/api') === 0) {
-          helper.requestLogger(req.method + ' ' + req.url + ' ' + agent.family.toLowerCase());
+          helper.requestLogger(req.url + ' ' + agent.family.toLowerCase());
         }
 
         return next();
