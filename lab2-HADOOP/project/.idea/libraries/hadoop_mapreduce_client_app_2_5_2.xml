@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="hadoop-mapreduce-client-app-2.5.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../hadoop/hadoop-2.5.2/share/hadoop/mapreduce/hadoop-mapreduce-client-app-2.5.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
