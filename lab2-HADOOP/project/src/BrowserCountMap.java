@@ -15,11 +15,9 @@ public class BrowserCountMap extends MapReduceBase implements Mapper<LongWritabl
   public void map(LongWritable key, Text value, OutputCollector<Text, IntWritable> output, Reporter reporter) throws IOException {
 
     String[] parts = (value.toString()).split(" ");
-    String id = parts[0];
-    int percent = Integer.parseInt(parts[1]);
+    String id = parts[1];
 
-    if (percent > THRESHOLD) {
-      output.collect(new Text(id), new IntWritable(percent));
-    }
+    output.collect(new Text(id), new IntWritable(1));
+
   }
 }

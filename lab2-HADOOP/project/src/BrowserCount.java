@@ -12,15 +12,15 @@ public class BrowserCount {
 
   public static void main(String[] args) throws IOException {
     if (args.length != 2) {
-      System.err.println("Usage: VideoCount <input path> <output path>");
+      System.err.println("Usage: BrowserCount <input path> <output path>");
       System.exit(-1);
     }
     JobConf conf = new JobConf(BrowserCount.class);
-    conf.setJobName("Video count");
+    conf.setJobName("Browser count");
     FileInputFormat.addInputPath(conf, new Path(args[0]));
     FileOutputFormat.setOutputPath(conf, new Path(args[1]));
-    conf.setMapperClass(VideoCountMap.class);
-    conf.setReducerClass(VideoCountReduce.class);
+    conf.setMapperClass(BrowserCountMap.class);
+    conf.setReducerClass(BrowserCountReduce.class);
     conf.setOutputKeyClass(Text.class);
     conf.setOutputValueClass(IntWritable.class);
     JobClient.runJob(conf);
