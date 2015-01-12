@@ -1,0 +1,3 @@
+Namenode http://localhost:50070/
+Datanode http://localhost:50075/
+Hadoop   http://localhost:8088/
