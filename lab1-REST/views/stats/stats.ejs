@@ -1,0 +1,40 @@
+
+<style type="text/css" >
+  #main {
+    width: 850px;
+    position: relative;
+    text-align: left;
+  }
+  #left {
+    position: absolute;
+    left: 0px;
+    width: 50%;
+  }
+  #right {
+    position: absolute;
+    left: 50%;
+    width: 50%;
+  }
+</style>
+
+<div align="center">
+  <div id="main">
+    <div id="left" >
+      <h2>URL statistic:</h2>
+      <ol>
+        <% for(var i=0; i<urlStat.length; i++) {%>
+           <li><b><%= urlStat[i].id %></b>: <%= urlStat[i].value %></li>
+        <% } %>
+      </ol>
+    </div>
+
+    <div id="right" >
+      <h2>Browser statistic:</h2>
+      <ol>
+        <% for(var i=0; i<browserStat.length; i++) {%>
+           <li><b><%= browserStat[i].id %></b>: <%= browserStat[i].value %></li>
+        <% } %>
+      </ol>
+    </div>
+  </div>
+</div>

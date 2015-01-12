@@ -78,6 +78,11 @@ module.exports.policies = {
     ],
   },
 
+  StatsController: {
+    '*': false,
+    'stats': true
+  }
+
 
 
 };

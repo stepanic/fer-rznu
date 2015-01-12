@@ -4,7 +4,7 @@
 fs = require("fs")
 util = require("util")
 log_file = fs.createWriteStream("request.log",
-  flags: "w"
+  flags: "a+"
 )
 log_stdout = process.stdout
 requestLogger = (d) -> #
