@@ -7,7 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="hadoop-common-2.5.2" level="project" />
-    <orderEntry type="library" name="hadoop-mapreduce-client-core-2.5.2" level="project" />
+    <orderEntry type="library" name="hadoop-common-2.6.0" level="project" />
+    <orderEntry type="library" name="hadoop-mapreduce-client-core-2.6.0" level="project" />
   </component>
 </module>
